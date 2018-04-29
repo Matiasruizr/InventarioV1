@@ -7,6 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Id Objeto" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtIdObjeto" HorizontalAlignment="Left" Height="23" Margin="109,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtNombreObjeto" HorizontalAlignment="Left" Height="23" Margin="109,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Cantidad" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtCantidadObjeto" HorizontalAlignment="Left" Height="23" Margin="109,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Precio" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtPrecioObjeto" HorizontalAlignment="Left" Height="23" Margin="109,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Marca" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtMarcaobjeto" HorizontalAlignment="Left" Height="23" Margin="109,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnAgregarObjeto" Content="Agregar" HorizontalAlignment="Left" Margin="109,267,0,0" VerticalAlignment="Top" Width="75" Click="btnAgregarObjeto_Click"/>
+        <DataGrid Name="dtgListarObjetos" HorizontalAlignment="Left" Height="104" Margin="313,32,0,0" VerticalAlignment="Top" Width="443"/>
+        <Label Content="Listar elementos" HorizontalAlignment="Left" Margin="315,160,0,0" VerticalAlignment="Top"/>
+        <Button Name="btnListarObjetos" Content="Listar" HorizontalAlignment="Left" Margin="429,163,0,0" VerticalAlignment="Top" Width="75" Click="btnListarObjetos_Click"/>
+        <Label Content="Eliminar" HorizontalAlignment="Left" Margin="315,230,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtEliminarObjeto" HorizontalAlignment="Left" Height="23" Margin="384,234,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnEliminarObjeto" Content="Eliminar" HorizontalAlignment="Left" Margin="526,237,0,0" VerticalAlignment="Top" Width="75" Click="btnEliminarObjeto_Click"/>
+
+
+
     </Grid>
 </Window>

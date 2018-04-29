@@ -31,5 +31,50 @@ namespace Aplicacion.Vista
                 conector = new INVENTARIOV1Entities();
             }
         }
+   
+        private void btnAgregarObjeto_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OBJETO o = new OBJETO();
+
+                o.ID_OBJETO = txtIdObjeto.Text;
+                o.NOMBRE = txtNombreObjeto.Text;
+                o.CANTIDAD = Int32.Parse(txtCantidadObjeto.Text);
+                o.PRECIO = Int32.Parse(txtPrecioObjeto.Text);
+                o.MARCA = txtMarcaobjeto.Text;
+
+                conector.OBJETOes.Add(o);
+                conector.SaveChanges();
+
+                MessageBox.Show("Se agrego correctamente");
+            }catch( Exception ex){
+                MessageBox.Show(ex.ToString());
+            }
+           
+        }
+
+        private void btnListarObjetos_Click(object sender, RoutedEventArgs e)
+        {
+            dtgListarObjetos.ItemsSource = null;
+            dtgListarObjetos.ItemsSource = conector.OBJETOes.ToList();
+        }
+
+        private void btnEliminarObjeto_Click(object sender, RoutedEventArgs e)
+        {
+            try{
+                OBJETO o = conector.OBJETOes.First(
+                  ob => ob.ID_OBJETO == this.txtEliminarObjeto.Text
+                  );
+
+                conector.OBJETOes.Remove(o);
+                conector.SaveChanges();
+                MessageBox.Show("Se elimino");
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+          
+        }
     }
 }
